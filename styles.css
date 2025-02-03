@@ -1,141 +1,154 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-
-.profile-image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  display: block;
-  margin: 10px auto;
-  position: relative;
-  z-index: 2;
-}
-
-.profile-name {
-  width: auto;
-  font-size: 35px;
-  background-color: #fabe28;
-  color: black;
-  padding: 8px 15px;
-  display: block;
-  text-align: center;
-  margin: auto;
-  position: relative;
-  z-index: 3;
-}
-
-#tc {
-  padding: 20px;
-  background-color: #565656;
-  text-align: center;
-  color: white;
-}
-
-#tc1,
-#tc2 {
-  padding: 10px;
-  background-color: #565656;
-  text-align: center;
-  color: white;
-}
-
-.vertical {
-  display: none; /* Hide vertical line on small screens */
-}
-
-#right-section {
-  position: static;
-  width: 100%;
-  padding: 15px;
-}
-
-/* Progress Bar Styles */
-.progress-container {
-  width: 100%;
-}
-
-.progress-container ul {
-  padding: 0;
-  list-style: none;
-}
-
-.progress-container li {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-}
-
-.progress-container label {
-  font-size: 14px;
-}
-
-.progress-container progress {
-  width: 100%;
-  height: 8px;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  .container-fluid {
-    padding: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
   }
-
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    position: relative;
+    z-index: 2;
+  }
+  
   .profile-name {
-    font-size: 28px;
-    padding: 6px 12px;
+    width: auto;
+    font-size: 35px;
+    background-color: #fabe28;
+    color: black;
+    padding: 8px 15px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    z-index: 3;
   }
-
-  #tc2 p {
-    font-size: 14px;
+  
+  #tc {
+    padding: 20px;
+    background-color: #565656;
+    text-align: center;
+    color: white;
   }
-
-  .col-md-5,
-  #right-section {
-    width: 100%;
-    padding: 15px;
+  
+  #tc1,
+  #tc2 {
+    padding: 10px;
+    background-color: #565656;
+    text-align: center;
+    color: white;
   }
-
-  .progress-container label {
-    font-size: 13px;
-  }
-
-  .progress-container progress {
-    width: 90%;
-  }
-  /* Vertical line for right side */
+  
+  /* Vertical line */
   .vertical {
     position: absolute;
+    left: 50%;
     top: 0;
     bottom: 0;
-    left: 50%;
-    width: 2px;
+    width: 3px;
     background-color: #565656;
-    margin-left: -1px; /* Center the line */
-    display: block; /* Ensure it is visible */
+    display: block;
+    margin-left: -1.5px; /* Center the line */
   }
-
+  
+  /* Right Section */
+  #right-section {
+    position: absolute;
+    right: 5%;
+    width: 40%;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  /* Progress Bar Styles */
+  .progress-container {
+    width: 100%;
+  }
+  
+  .progress-container ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .progress-container li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .progress-container label {
+    font-size: 14px;
+  }
+  
+  .progress-container progress {
+    width: 100%;
+    height: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .vertical {
+      display: none;
+    }
+  
+    #right-section {
+      position: static;
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .container-fluid {
+      padding: 10px;
+    }
+  
+    .profile-name {
+      font-size: 28px;
+      padding: 6px 12px;
+    }
+  
+    #tc2 p {
+      font-size: 14px;
+    }
+  
+    .col-md-5,
+    #right-section {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .progress-container label {
+      font-size: 13px;
+    }
+  
+    .progress-container progress {
+      width: 90%;
+    }
+  }
+  
   /* Ensure proper layout for large screens */
   @media (min-width: 768px) {
     .container-fluid {
       position: relative;
     }
-
+  
     .col-md-5 {
       padding-right: 30px; /* Add spacing for the vertical line */
     }
-
+  
     #right-section {
       padding-left: 30px; /* Add spacing for the vertical line */
     }
   }
-
+  
   /* Hide vertical line on smaller screens */
   @media (max-width: 767px) {
     .vertical {
       display: none;
     }
   }
-}
+  

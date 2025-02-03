@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.profile-image {
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%;
+    display: block; 
+    margin: 10px auto; 
+    position: relative; 
+    z-index: 2;
+}
+
+.profile-name {
+    width: auto;
+    font-size: 35px;
+    background-color: #fabe28;
+    color: black;
+    padding: 8px 15px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    z-index: 3;
+}
+
+#tc {
+    padding: 20px;
+    background-color: #565656;
+    text-align: center;
+    color: white;
+}
+
+#tc1, #tc2 {
+    padding: 10px;
+    background-color: #565656;
+    text-align: center;
+    color: white;
+}
+
+.vertical {
+    display: none; /* Hide vertical line on small screens */
+}
+
+#right-section {
+    position: static;
+    width: 100%;
+    padding: 15px;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    width: 100%;
+}
+
+.progress-container ul {
+    padding: 0;
+    list-style: none;
+}
+
+.progress-container li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.progress-container label {
+    font-size: 14px;
+}
+
+.progress-container progress {
+    width: 100%;
+    height: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container-fluid {
+        padding: 10px;
+    }
+
+    .profile-name {
+        font-size: 28px;
+        padding: 6px 12px;
+    }
+
+    #tc2 p {
+        font-size: 14px;
+    }
+
+    .col-md-5, #right-section {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .progress-container label {
+        font-size: 13px;
+    }
+
+    .progress-container progress {
+        width: 90%;
+    }
+}

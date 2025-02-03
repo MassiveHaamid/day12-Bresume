@@ -1,152 +1,198 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-
-.profile-image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  display: block;
-  margin: 10px auto;
-  position: relative;
-  z-index: 2;
-}
-
-.profile-name {
-  width: auto;
-  font-size: 35px;
-  background-color: #fabe28;
-  color: black;
-  padding: 8px 15px;
-  display: block;
-  text-align: center;
-  margin: auto;
-  position: relative;
-  z-index: 3;
-}
-
-#tc,
-#tc1,
-#tc2 {
-  padding: 20px;
-  background-color: #565656;
-  text-align: center;
-  color: white;
-}
-
-/* Vertical line */
-.vertical {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background-color: #565656;
-  display: block;
-  margin-left: -1.5px; /* Center the line */
-}
-
-/* Right Section */
-#right-section {
-  position: relative; /* Change from absolute to relative */
-  width: 50%; /* Adjust width to fit properly */
-  padding: 20px;
-  background-color: #fff;
-  float: right; /* Aligns the section to the right */
-}
-
-/* Ensure Left-Side Content Stays in Place */
-#left-section {
-  width: 50%; /* Set width */
-  float: left; /* Aligns the section to the left */
-  background-color: #565656; /* Dark background */
-  padding: 20px;
-  color: white;
-}
-
-/* Progress Bar Styles */
-.progress-container {
-  width: 100%;
-}
-
-.progress-container ul {
-  padding: 0;
-  list-style: none;
-}
-
-.progress-container li {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-}
-
-.progress-container label {
-  font-size: 14px;
-}
-
-.progress-container progress {
-  width: 100%;
-  height: 8px;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .vertical {
-    display: none; /* Hide vertical line on small screens */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
   }
-
-  #right-section,
-  #left-section {
-    width: 100%; /* Full width on small screens */
-    float: none;
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    position: relative;
+    z-index: 2;
   }
-}
-
-@media (max-width: 600px) {
-  .container-fluid {
-    padding: 10px;
-  }
-
+  
   .profile-name {
-    font-size: 28px;
-    padding: 6px 12px;
+    width: auto;
+    font-size: 35px;
+    background-color: #fabe28;
+    color: black;
+    padding: 8px 15px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    z-index: 3;
   }
-
-  #tc2 p {
+  
+  #tc,
+  #tc1,
+  #tc2 {
+    padding: 20px;
+    background-color: #565656;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Right and Left Sections Layout */
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    gap: 20px; /* Add some gap between sections */
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  /* Left Section */
+  #left-section {
+    width: 48%;
+    padding: 20px;
+    color: black;
+    background-color: #fff;
+    border-left: 2px solid #dee2e6;
+    box-sizing: border-box;
+  }
+  
+  #left-section .fa-briefcase,
+  #left-section .fa-cogs,
+  #left-section .fa-user {
+    color: #007bff;
+    margin-right: 10px;
+  }
+  
+  /* Right Section */
+  #right-section {
+    width: 48%;
+    padding: 20px;
+    background-color: #fff;
+    border-left: 2px solid #dee2e6;
+    box-sizing: border-box;
+  }
+  
+  #right-section h2,
+  #right-section h3,
+  #right-section h4 {
+    color: #343a40;
+    margin-bottom: 15px;
+  }
+  
+  #right-section p {
+    color: #6c757d;
+    line-height: 1.6;
+  }
+  
+  #right-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  #right-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  #right-section .fa-briefcase,
+  #right-section .fa-graduation-cap {
+    color: #007bff;
+    margin-right: 10px;
+  }
+  
+  /* Progress Bar Styles */
+  .progress-container {
+    width: 100%;
+  }
+  
+  .progress-container ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .progress-container li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .progress-container label {
     font-size: 14px;
   }
-
-  .col-md-5,
-  #right-section {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .progress-container label {
-    font-size: 13px;
-  }
-
+  
   .progress-container progress {
-    width: 90%;
+    width: 100%;
+    height: 8px;
   }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .container-fluid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #right-section,
+    #left-section {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .container-fluid {
+      padding: 10px;
+    }
+  
+    .profile-name {
+      font-size: 28px;
+      padding: 6px 12px;
+    }
+  
+    #tc2 p {
+      font-size: 14px;
+    }
+  
+    .col-md-5,
+    #right-section {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .progress-container label {
+      font-size: 13px;
+    }
+  
+    .progress-container progress {
+      width: 90%;
+    }
+/* Vertical Line */
+.vertical {
+    border-left: 2px solid #dee2e6;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
 }
 
-/* Ensure proper layout for large screens */
-@media (min-width: 768px) {
-  .container-fluid {
-    position: relative;
-  }
-
-  .col-md-5 {
-    padding-right: 30px; /* Add spacing for the vertical line */
-  }
+/* Progress Bar Custom Styles */
+progress {
+    background-color: #e9ecef;
+    border-radius: 5px;
 }
 
-/* Hide vertical line on smaller screens */
-@media (max-width: 767px) {
-  .vertical {
-    display: none;
-  }
+progress::-webkit-progress-bar {
+    background-color: #e9ecef;
+    border-radius: 5px;
 }
+
+progress::-webkit-progress-value {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #007bff;
+    border-radius: 5px;
+}  
+}
+  
